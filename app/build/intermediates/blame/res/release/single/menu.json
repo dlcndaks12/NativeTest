@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\release\\menu\\main.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\release\\menu\\activity_main_drawer.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    }
+]

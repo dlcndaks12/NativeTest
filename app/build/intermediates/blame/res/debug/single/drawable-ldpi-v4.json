@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_menu_share.png",
+        "source": "D:\\android\\NativeTest\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_share.png"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_menu_slideshow.png",
+        "source": "D:\\android\\NativeTest\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_slideshow.png"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_menu_gallery.png",
+        "source": "D:\\android\\NativeTest\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_gallery.png"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_menu_send.png",
+        "source": "D:\\android\\NativeTest\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_send.png"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_menu_manage.png",
+        "source": "D:\\android\\NativeTest\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_manage.png"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_menu_camera.png",
+        "source": "D:\\android\\NativeTest\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_camera.png"
+    }
+]

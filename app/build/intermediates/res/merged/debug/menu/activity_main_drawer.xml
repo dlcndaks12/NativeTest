@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/navtitle1">
+            <menu>
+                <item
+                    android:title="@string/navmenu1_1" />
+                <item
+                    android:title="@string/navmenu1_2" />
+                <item
+                    android:title="@string/navmenu1_3" />
+            </menu>
+        </item>
+        <item android:title="@string/navtitle2">
+            <menu>
+                <item
+                    android:title="@string/navmenu2_1" />
+                <item
+                    android:title="@string/navmenu2_2" />
+                <item
+                    android:title="@string/navmenu2_3" />
+                <item
+                    android:title="@string/navmenu2_4" />
+            </menu>
+        </item>
+        <item android:title="@string/navtitle3">
+            <menu>
+                <item
+                    android:title="@string/navmenu3_1" />
+                <item
+                    android:title="@string/navmenu3_2" />
+            </menu>
+        </item>
+    </group>
+</menu>
