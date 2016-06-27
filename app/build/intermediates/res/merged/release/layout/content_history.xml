@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:gravity="center"
+        android:text="ABOUT COSCOI"
+        android:background="#535c65"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerSub2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="1dp"
+        android:background="@drawable/spinner_border"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="25dp"
+        android:orientation="vertical"
+        android:background="#fff">
+
+        <ViewFlipper
+            android:id="@+id/vfHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:measureAllChildren="false">
+            <LinearLayout
+                android:id="@+id/history2015"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2015"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2015"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국가스공사 정부3.0관련 홈페이지 메뉴 개선"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국가스공사 홈페이지 메인화면 디자인 개선"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 인사혁신처 교육정보통합시스템 서비스 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 미래부 창조경제타운 서비스 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아프리카 미래전략센터 메인개편"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 사이언스올 웹사이트 운영 및 활성화 사업 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] K정보통신기술진흥센터 모바일 기반 3D프린팅 콘텐츠 생성 저작 출력기술 R&amp;D 사업 선정 &amp; 진행중"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2016"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2016"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2016"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] 정보통신기술진흥센터 모바일 기반 3D프린팅 콘텐츠 생성 저작 출력기술 R&amp;D 2차년도 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] KOCCA 3D프린팅 R&amp;D사업 3차년도 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 인사혁신처 교육정보통합시스템 서비스 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 빛마루 유통시스템 및 홈페이지 운용관리 위탁용역 사업 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아프리카 미래전략센터 영문사이트 신규 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아프리카 미래전략센터 유지보수 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국타이어 EP(엔터프라이즈포털) 수주"/>
+            </LinearLayout>
+        </ViewFlipper>
+
+    </LinearLayout>
+
+    <include layout="@layout/footer"/>
+</LinearLayout>
