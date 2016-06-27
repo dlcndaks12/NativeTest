@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.almond.nativetest.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -11,240 +11,113 @@
     <com.almond.nativetest.HeightViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
-    </com.almond.nativetest.HeightViewPager>
+        android:layout_height="300dp"></com.almond.nativetest.HeightViewPager>
 
     <LinearLayout
         android:id="@+id/quickMenu"
-        android:layout_below="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"
+        android:layout_below="@+id/view_pager"
+        android:background="@drawable/main_menu_border"
         android:gravity="center"
-        android:background="@drawable/main_menu_border">
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/main_menu1_icon"
             android:layout_weight="1"
-            android:paddingTop="20dp"
+            android:background="?attr/selectableItemBackground"
             android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackground" />
+            android:src="@drawable/main_menu1_icon" />
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/main_menu2_border"
             android:paddingLeft="1dp"
-            android:paddingRight="1dp"
-            android:background="@drawable/main_menu2_border">
+            android:paddingRight="1dp">
+
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/main_menu2_icon"
-                android:scaleType="fitCenter"
-                android:paddingTop="20dp"
+                android:background="?attr/selectableItemBackground"
                 android:paddingBottom="20dp"
-                android:background="?attr/selectableItemBackground"/>
+                android:paddingTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_menu2_icon" />
         </FrameLayout>
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/main_menu3_icon"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:paddingTop="20dp"
+            android:background="?attr/selectableItemBackground"
             android:paddingBottom="20dp"
-            android:background="?attr/selectableItemBackground" />
+            android:paddingTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main_menu3_icon" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/downArea"
-        android:layout_below="@+id/quickMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/quickMenu"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="77dp"
             android:background="@drawable/down_border1">
+
             <ImageView
-                android:src="@drawable/main_btn1_2"
                 android:layout_width="wrap_content"
                 android:layout_height="15dp"
-                android:scaleType="fitEnd"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginBottom="15dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/main_btn1_2" />
+
             <ImageButton
-                android:src="@drawable/main_btn1_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
                 android:padding="20dp"
                 android:scaleType="fitStart"
-                android:background="?attr/selectableItemBackground"/>
+                android:src="@drawable/main_btn1_1" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="77dp"
             android:background="@drawable/down_border1">
+
             <ImageView
-                android:src="@drawable/main_btn2_2"
                 android:layout_width="wrap_content"
                 android:layout_height="15dp"
-                android:scaleType="fitEnd"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginBottom="15dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/main_btn2_2" />
+
             <ImageButton
-                android:src="@drawable/main_btn2_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
                 android:padding="20dp"
                 android:scaleType="fitStart"
-                android:background="?attr/selectableItemBackground"/>
+                android:src="@drawable/main_btn2_1" />
         </RelativeLayout>
     </LinearLayout>
 
-    <!-- FOOTER -->
-    <LinearLayout
-        android:layout_below="@+id/downArea"
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:background="#e6e6e6">
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:entries="@array/footer"
-            android:background="#d6d6d6"
-            android:gravity="center_vertical">
-        </Spinner>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="(주)코스코이"
-            android:textColor="#444444"
-            android:textSize="12dp"/>
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="11dp"
-            android:textColor="#888888"
-            android:text="사업자등록번호. 128-86-42199 06052 (06052) 서울시 강남구 논현로 706 아이캐슬 빌딩 5층"/>
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="11dp"
-            android:textColor="#888888"
-            android:text="5 Floor, 706, Nonhyeon-ro, Gangnam-gu, Seoul, Korea"/>
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="11dp"
-            android:textColor="#888888"
-            android:text="Tel. +82-70-8670-0130"/>
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="11dp"
-            android:textColor="#888888"
-            android:text="Fax. +82-2-3453-6468"/>
-        <TextView
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="11dp"
-            android:textColor="#888888"
-            android:text="E-Mail. good@coscoi.net / coscoi@coscoi.net"
-            android:background="@drawable/footer_border"
-            android:paddingBottom="15dp"/>
-        <LinearLayout
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:textSize="12dp"
-                android:background="?attr/selectableItemBackground"
-                android:text="개인정보처리방침"
-                android:gravity="center_vertical"/>
-            <Button
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:textSize="12dp"
-                android:background="?attr/selectableItemBackground"
-                android:text="찾아오시는 길"
-                android:gravity="center_vertical"/>
-            <Button
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:background="?attr/selectableItemBackground"
-                android:textSize="12dp"
-                android:text="이용약관"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/footer_border"
-            android:paddingBottom="15dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:background="?attr/selectableItemBackground"
-                android:textSize="12dp"
-                android:text="이메일무단수집거부"
-                android:gravity="center_vertical"/>
-            <Button
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:background="?attr/selectableItemBackground"
-                android:textSize="12dp"
-                android:text="저작권보호정책"
-                android:gravity="center_vertical"/>
-            <Button
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:background="?attr/selectableItemBackground"
-                android:textSize="12dp"
-                android:text="Conract Us"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="11dp"
-                android:textColor="#b8b4b4"
-                android:gravity="center"
-                android:text="Copyright © 2016 COSCOI. All rights reserved."/>
-        </LinearLayout>
-    </LinearLayout>
+    <include layout="@layout/footer"/>
 </RelativeLayout>

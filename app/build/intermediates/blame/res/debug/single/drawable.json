@@ -32,6 +32,10 @@
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\whoweare_content.png",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\whoweare_content.png"
+    },
+    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
     },
@@ -144,6 +148,10 @@
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\icon_menutitle1.png"
     },
     {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner_border.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\spinner_border.xml"
+    },
+    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_menu_border.xml",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\main_menu_border.xml"
     },
@@ -176,12 +184,12 @@
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\main_visual4.png"
     },
     {
-        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_border.xml",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\nav_border.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_menu1_icon.png",

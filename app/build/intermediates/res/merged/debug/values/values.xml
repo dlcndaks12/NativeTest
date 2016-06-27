@@ -5,6 +5,11 @@
         <item>Coscoi System</item>
         <item>Toy n Kids Shop</item>
     </string-array>
+    <string-array name="whoweare">
+        <item>WHO WE ARE</item>
+        <item>HISTORY</item>
+        <item>LOCATION</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
