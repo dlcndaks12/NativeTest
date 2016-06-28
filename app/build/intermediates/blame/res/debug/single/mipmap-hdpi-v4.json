@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\NativeTest\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
