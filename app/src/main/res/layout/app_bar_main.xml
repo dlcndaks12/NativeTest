@@ -34,6 +34,8 @@
                 android:src="@drawable/logo" />
         </RelativeLayout>
 
+
+
         <ScrollView
             android:id="@+id/mainScroll"
             android:layout_width="match_parent"
@@ -45,7 +47,7 @@
                 android:id="@+id/contents"
                 layout="@layout/content_main" />-->
 
-            <ViewFlipper
+            <!--<ViewFlipper
                 android:id="@+id/vf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +55,13 @@
                 <include android:id="@+id/content_main" layout="@layout/content_main"/>
                 <include android:id="@+id/content_whoweare" layout="@layout/content_whoweare"/>
                 <include android:id="@+id/content_history" layout="@layout/content_history"/>
-            </ViewFlipper>
+            </ViewFlipper>-->
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </FrameLayout>
 
         </ScrollView>
 

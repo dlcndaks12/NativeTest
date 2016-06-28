@@ -17,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WhoweareActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".LocationActivity"></activity>
     </application>
 
 </manifest>

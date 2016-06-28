@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.almond.nativetest.HistoryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:gravity="center"
+        android:text="ABOUT COSCOI"
+        android:background="#535c65"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="1dp"
+        android:background="@drawable/spinner_border"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="25dp"
+        android:orientation="vertical"
+        android:background="#fff">
+        <ViewFlipper
+            android:id="@+id/vfHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:measureAllChildren="false">
+
+            <LinearLayout
+                android:id="@+id/history2008"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2008"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2008 이전"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 졸라맨 캐릭터 개발 및 라이센싱 사업"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] '태권브이' 공식 피규어 1호 개발"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2009"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2009"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2009"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="법인 설립"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2010"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2010"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2010"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] 두산산차BG 160개국 바이어 웹 브로슈어 시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아발론 IVY, CHAMP FLEX, LMS시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] KGB 가구시뮬레이션 시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] KT이러닝 동영상플레이어 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국해양연구원 플래시 키오스크 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 대가야고분탐험 게임 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 싸이더스 웹사이트 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 예레동 생태체험관 키오스크 시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 영국 대사관 게임(OX퀴즈게임) 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] '동방신기' 브릭 캐릭터 및 피규어 개발 및 제작"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] '비', '이병헌', '최지우', '이준기' 등 스타 피규어 제작"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2011"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2011"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2011"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] 삼성에스원 통합 웹뷰어 솔루션 개발 &amp;ERP연동"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 국립고궁박물관 웹사이트 개발 &amp;내부시스템 연동 &amp;웹접근성 마크 획득"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 국립고궁사이버박물관 웹사이트개발&amp;VR개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 스타앤샵 온라인 쇼핑몰 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 캐릭터 종합쇼핑몰 '토이 앤키즈' 오픈"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 'MBC 무한도전 멤버' 브릭 피규어 개발/제작"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 'KBS 탑 밴드' MD 상품 기획, 디자인 및 제작"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 스타, 디자인상품 종합몰 아띠아또(ATIATO) 쇼핑몰 오픈"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="자본금 1억 증자(총 자본금 2억 5천)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 스타 MD제품 납품 계약(Sidus HQ)"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2012"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2012"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2012"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] CJ E&amp;M 투니버스 웹사이트 개발, 편성표 시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] STCO 제로라운지 B2B2C 회원제 쇼핑몰 플랫폼 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아띠아또 B2B2C 온라인 쇼핑몰 플랫폼 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] FT아일랜드 온라인 샵 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 무한도전 모바일앱 퍼즐게임 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="벤처기업 인증 / 기업부설연구소 설립"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="자본금 2.5억 증자 (총 자본금 5억)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 캐릭터(스폰지밥, 둘리) 온라인 유통 계약"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] MBC '해를 품은 달' MD상품 기획 및 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] FNC엔터테인먼트 상품화 계약 체결 (FT Island 브릭 피규어 개발/제작)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 미국 Universal Studio 국내 상품화 에이전트 계약 체결"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 'Lucky Fred' 국재 상품화 및 배급 에이전트 계약 체결"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 큐브 엔터테인먼트 소속 전 아티스트 캐릭터상품화 계약"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2013"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2013"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2013"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] SK텔레콤 웹사이트 개발, 반응형웹개발, 2013년 기업부문 웹어워드 대상수상"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 열매나눔 웹사이트 개발, 기부사이트 매거진시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] KT올레맵 웹서비스 개발, KT지하철 플래시개발, 웹접근성 마크획득 도트 이미지강소기업 인증획득"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 제주국제자유도시 개발센터 M/A, 웹접근성 마크 획득"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 제주항공우주박물과 웹사이트 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 제주국제자유도시 개발센터 이슈관리시스템 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 디즈니 채널, 디즈니 주니어 2013년 M/A"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 디즈니 카탈로그 쇼핑몰 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 디즈니 피니와 퍼브 웹사이트 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 코코엔터테인먼트 소속 전 연예인 캐릭터 사업 계약 체결"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="기업부설연구소 설립"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="미래창조과학부 &amp; 콘텐츠 진흥원 차세대 ICT 융합 콘텐츠 지원 프로젝트 사업자 선정"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="문화체육관광부 &amp; 기업은행 '문화콘텐츠 강소기업' 선정"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2014"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2014"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2014"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] KOCCA 3D프린팅 R&amp;D사업 선정 &amp; 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 외교부 아프리카미래전략센터 홈페이지 리뉴얼 구축 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 코웨이 통합 웹사이트 리뉴얼 구축 , SAP연동, 모바일웹&amp;앱 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] SK E&amp;S 사이트 리뉴얼, SAP연동, EBPP연동"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국과학창의재단 사이언스올 시스템 구축 &amp; KSCC 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 3D프린팅 시스템과 클라우드형 판매시스템 개발 R&amp;D과제 선정 &amp; 진행 중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 디즈니 채널, 디즈니 주니어 2014년 웹사이트 리뉴얼"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 디즈니 2014년 M/A"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 새정치민주연합 2014년 선거용 웹사이트 개발"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] EBS &amp; Freewill “코코코 다코” 캐릭터 개발 및 스타일가이드 계약 체결"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 카카오톡 시즌1 캐릭터 상품화 계약 체결"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[Character&amp;MD] 홀로그램 정부 지원사업 자체 캐릭터 Nobah 개발"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2015"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2015"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2015"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국가스공사 정부3.0관련 홈페이지 메뉴 개선"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국가스공사 홈페이지 메인화면 디자인 개선"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 인사혁신처 교육정보통합시스템 서비스 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 미래부 창조경제타운 서비스 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아프리카 미래전략센터 메인개편"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 사이언스올 웹사이트 운영 및 활성화 사업 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] K정보통신기술진흥센터 모바일 기반 3D프린팅 콘텐츠 생성 저작 출력기술 R&amp;D 사업 선정 &amp; 진행중"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history2016"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2016"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/spinner_border"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#444"
+                    android:text="2016"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="[IT] 정보통신기술진흥센터 모바일 기반 3D프린팅 콘텐츠 생성 저작 출력기술 R&amp;D 2차년도 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] KOCCA 3D프린팅 R&amp;D사업 3차년도 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 인사혁신처 교육정보통합시스템 서비스 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 빛마루 유통시스템 및 홈페이지 운용관리 위탁용역 사업 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아프리카 미래전략센터 영문사이트 신규 구축"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 아프리카 미래전략센터 유지보수 진행중"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="[IT] 한국타이어 EP(엔터프라이즈포털) 수주"/>
+            </LinearLayout>
+        </ViewFlipper>
+
+        <ImageButton
+            android:id="@+id/btnHistoryPrev"
+            android:src="@drawable/list_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside"
+            android:layout_alignParentLeft="true"
+            android:background="?attr/selectableItemBackground"/>
+        <ImageButton
+            android:id="@+id/btnHistoryNext"
+            android:src="@drawable/list_next"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackground"/>
+    </RelativeLayout>
+
+    <include layout="@layout/footer"/>
+
+</LinearLayout>

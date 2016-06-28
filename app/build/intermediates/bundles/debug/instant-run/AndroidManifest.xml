@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.almond.nativetest.WhoweareActivity" />
+        <activity android:name="com.almond.nativetest.HistoryActivity" />
+        <activity android:name="com.almond.nativetest.LocationActivity" />
     </application>
 
 </manifest>
