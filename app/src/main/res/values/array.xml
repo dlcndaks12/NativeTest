@@ -11,4 +11,22 @@
         <item>HISTORY</item>
         <item>LOCATION</item>
     </string-array>
+
+    <string-array name="character">
+        <item>CHARACTER</item>
+        <item>AGENCY</item>
+        <item>MERCHANDISING</item>
+    </string-array>
+
+    <string-array name="web">
+        <item>WEB</item>
+        <item>MOBILE</item>
+        <item>AD</item>
+    </string-array>
+
+    <string-array name="printing">
+        <item>3D 프린팅 비즈 플랫폼</item>
+        <item>3D 프린팅 플랫폼 서비스 R&amp;D</item>
+        <item>모바일 기반의 3D 프린팅 플랫폼 서비스 R&amp;D</item>
+    </string-array>
 </resources>

@@ -16,12 +16,21 @@ public class WhoweareActivity extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        frameLayout.removeAllViews();
         getLayoutInflater().inflate(R.layout.activity_whoweare, frameLayout);
 
         select = (Spinner) findViewById(R.id.spinnerSub);
         spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.whoweare, R.layout.spinner_item);
         select.setAdapter(spinnerAdapter);
-        select.setOnItemSelectedListener(selectedListener);
+        select.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                itemSelected(view, position, "about");
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
         select.setSelection(0);
     }
 

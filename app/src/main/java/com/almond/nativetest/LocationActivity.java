@@ -3,6 +3,7 @@ package com.almond.nativetest;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,10 +14,12 @@ public class LocationActivity extends MainActivity {
 
     private Spinner select;
     private SpinnerAdapter spinnerAdapter;
+    private boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        frameLayout.removeAllViews();
         getLayoutInflater().inflate(R.layout.activity_location, frameLayout);
 
         select = (Spinner) findViewById(R.id.spinnerSub);
@@ -25,11 +28,10 @@ public class LocationActivity extends MainActivity {
         select.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                itemSelected(view, position, "about");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
         select.setSelection(2);

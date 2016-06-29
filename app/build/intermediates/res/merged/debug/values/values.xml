@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="character">
+        <item>CHARACTER</item>
+        <item>AGENCY</item>
+        <item>MERCHANDISING</item>
+    </string-array>
     <string-array name="footer">
         <item>Family Site</item>
         <item>Coscoi System</item>
         <item>Toy n Kids Shop</item>
+    </string-array>
+    <string-array name="printing">
+        <item>3D 프린팅 비즈 플랫폼</item>
+        <item>3D 프린팅 플랫폼 서비스 R&amp;D</item>
+        <item>모바일 기반의 3D 프린팅 플랫폼 서비스 R&amp;D</item>
+    </string-array>
+    <string-array name="web">
+        <item>WEB</item>
+        <item>MOBILE</item>
+        <item>AD</item>
     </string-array>
     <string-array name="whoweare">
         <item>WHO WE ARE</item>
@@ -304,7 +319,8 @@
     <string name="navmenu2_1">· CHARACTER &amp; MD</string>
     <string name="navmenu2_2">· WEB SI/SM</string>
     <string name="navmenu2_3">· 3D PRINTING PLATFORM</string>
-    <string name="navmenu2_4">· SMART TOY</string>
+    <string name="navmenu2_4">· SMART HEALTHCARE</string>
+    <string name="navmenu2_5">· SMART TOY</string>
     <string name="navmenu3_1">· NOTICE</string>
     <string name="navmenu3_2">· RECRUIT</string>
     <string name="navtitle1">ABOUT COSCOI</string>

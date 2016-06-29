@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.almond.nativetest">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +23,17 @@
         </activity>
         <activity android:name=".WhoweareActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".CharacterActivity" />
+        <activity android:name=".WebActivity" />
+        <activity
+            android:name=".PrintingActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".HealthActivity" />
+        <activity
+            android:name=".SmartToyActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".NoticeActivity"></activity>
     </application>
 
 </manifest>

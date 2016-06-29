@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
 		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from D:\android\NativeTest\app\src\main\AndroidManifest.xml
@@ -13,8 +13,20 @@ ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:2:1-25:12
 	android:versionCode
 		INJECTED from D:\android\NativeTest\app\src\main\AndroidManifest.xml
 		INJECTED from D:\android\NativeTest\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:7:22-73
 application
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:5:5-23:19
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:9:5-37:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
@@ -34,43 +46,71 @@ MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\android\Nati
 MERGED from [com.android.support:support-v4:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:12:9-41
 	android:supportsRtl
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:13:9-35
 	android:allowBackup
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:10:9-52
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:14:9-52
 activity#com.almond.nativetest.MainActivity
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:11:9-19:20
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:15:9-23:20
 	android:theme
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:13:13-56
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:12:13-41
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:21:27-74
 activity#com.almond.nativetest.WhoweareActivity
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:20:9-54
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:24:9-54
 	android:name
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:20:19-51
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:24:19-51
 activity#com.almond.nativetest.HistoryActivity
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:21:9-53
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:25:9-53
 	android:name
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:21:19-50
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:25:19-50
 activity#com.almond.nativetest.LocationActivity
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:22:9-63
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:26:9-54
 	android:name
-		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:22:19-51
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:26:19-51
+activity#com.almond.nativetest.CharacterActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:27:9-55
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:27:19-52
+activity#com.almond.nativetest.WebActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:28:9-49
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:28:19-46
+activity#com.almond.nativetest.PrintingActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:29:9-31:51
+	android:hardwareAccelerated
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:31:13-48
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:30:13-45
+activity#com.almond.nativetest.HealthActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:32:9-52
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:32:19-49
+activity#com.almond.nativetest.SmartToyActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:33:9-35:51
+	android:hardwareAccelerated
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:35:13-48
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:34:13-45
+activity#com.almond.nativetest.NoticeActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:36:9-61
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:36:19-49
 uses-sdk
 INJECTED from D:\android\NativeTest\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78

@@ -4,7 +4,6 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
     <include
@@ -17,8 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#323640"
-        android:fitsSystemWindows="true">
+        android:background="#323640">
         <!--app:menu="@menu/activity_main_drawer"-->
         <!--app:itemTextColor="#8e957"-->
 
@@ -160,13 +158,24 @@
                     android:textSize="@dimen/navvalue_size" />
 
                 <Button
-                    android:id="@+id/menuSmart"
+                    android:id="@+id/menuHealth"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="?attr/selectableItemBackground"
                     android:gravity="center_vertical"
                     android:paddingLeft="40dp"
                     android:text="@string/navmenu2_4"
+                    android:textColor="@color/navvalue_color"
+                    android:textSize="@dimen/navvalue_size" />
+
+                <Button
+                    android:id="@+id/menuSmart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="40dp"
+                    android:text="@string/navmenu2_5"
                     android:textColor="@color/navvalue_color"
                     android:textSize="@dimen/navvalue_size" />
             </LinearLayout>

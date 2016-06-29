@@ -1,6 +1,5 @@
 package com.almond.nativetest;
 
-import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +10,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private Button menu1;
     private Button menu2;
     private Button menu3;
+    private Button menu4;
+    private Button menu5;
+    private Button menu6;
+    private Button menu7;
+    private Button menu8;
+    private Button menu9;
+    private Button menu10;
     private BackPressCloseHandler backPressCloseHandler;
 
     @Override
@@ -52,12 +56,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    Spinner.OnItemSelectedListener selectedListener = new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            Log.e("selected : ", view.getContext().toString());
-            Intent intent;
+    public void itemSelected(View view, int position, String type) {
+        Log.e("selected : ", view.getContext().toString());
+        Intent intent;
 
+        if (type.equals("about")) {
             switch (position) {
                 case 0:
                     intent = new Intent(view.getContext(), WhoweareActivity.class);
@@ -77,12 +80,10 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
             }
-        }
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
+        } else if (type.equals("business")) {
 
         }
-    };
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,6 +139,72 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 closeDrawer();
                 Intent intent = new Intent(ctx, LocationActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
+        menu4 = (Button) findViewById(R.id.menuCharacter);
+        menu4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeDrawer();
+                Intent intent = new Intent(ctx, CharacterActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
+        menu5 = (Button) findViewById(R.id.menuWeb);
+        menu5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeDrawer();
+                Intent intent = new Intent(ctx, WebActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
+        menu6 = (Button) findViewById(R.id.menu3D);
+        menu6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeDrawer();
+                Intent intent = new Intent(ctx, PrintingActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
+        menu7 = (Button) findViewById(R.id.menuHealth);
+        menu7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeDrawer();
+                Intent intent = new Intent(ctx, HealthActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
+        menu8 = (Button) findViewById(R.id.menuSmart);
+        menu8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeDrawer();
+                Intent intent = new Intent(ctx, SmartToyActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
+        menu9 = (Button) findViewById(R.id.menuNotice);
+        menu9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeDrawer();
+                Intent intent = new Intent(ctx, NoticeActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }
