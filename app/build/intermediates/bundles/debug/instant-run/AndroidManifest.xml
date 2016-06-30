@@ -41,6 +41,7 @@
             android:name="com.almond.nativetest.SmartToyActivity"
             android:hardwareAccelerated="false" />
         <activity android:name="com.almond.nativetest.NoticeActivity" />
+        <activity android:name="com.almond.nativetest.RecruitActivity" />
     </application>
 
 </manifest>

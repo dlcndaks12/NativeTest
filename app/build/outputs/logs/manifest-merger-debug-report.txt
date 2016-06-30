@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from D:\android\NativeTest\app\src\main\AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
 		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:7:22-73
 application
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:9:5-37:19
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:9:5-38:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
@@ -108,9 +108,13 @@ ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:33:9-35:51
 	android:name
 		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:34:13-45
 activity#com.almond.nativetest.NoticeActivity
-ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:36:9-61
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:36:9-52
 	android:name
 		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:36:19-49
+activity#com.almond.nativetest.RecruitActivity
+ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:37:9-62
+	android:name
+		ADDED from D:\android\NativeTest\app\src\main\AndroidManifest.xml:37:19-50
 uses-sdk
 INJECTED from D:\android\NativeTest\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.4.0] D:\android\NativeTest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78

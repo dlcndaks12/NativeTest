@@ -33,7 +33,8 @@
         <activity
             android:name=".SmartToyActivity"
             android:hardwareAccelerated="false" />
-        <activity android:name=".NoticeActivity"></activity>
+        <activity android:name=".NoticeActivity" />
+        <activity android:name=".RecruitActivity"></activity>
     </application>
 
 </manifest>

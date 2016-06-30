@@ -1,34 +1,34 @@
 package com.almond.nativetest;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.AsyncTask;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class NoticeActivity extends MainActivity {
     private ListView noticeList;
     private NoticeViewAdapter noticeAdapter;
     private int count = 1;
     private boolean loadingMore = false;
+    private JSONArray jarr;
+    private int findex = 0;
+    private View footerView;
+    private TextView empty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +36,21 @@ public class NoticeActivity extends MainActivity {
         frameLayout.removeAllViews();
         getLayoutInflater().inflate(R.layout.activity_notice, frameLayout);
 
+        findex = 0;
+
         noticeAdapter = new NoticeViewAdapter();
         noticeList = (ListView) findViewById(R.id.listNotice);
         noticeList.setAdapter(noticeAdapter);
 
-        View footerView = ((LayoutInflater)this.getSystemService
+        footerView = ((LayoutInflater)this.getSystemService
                 (Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.listfooter, null, false);
         noticeList.addFooterView(footerView);
 
-        for (int i = 0; i < 10; i++) {
-            noticeAdapter.addItem("공지", "제목입니다. " + count++, "2016. 05. 29");
-        }
+        LinearLayout listfooter = (LinearLayout)findViewById(R.id.listfooter);
+        empty = (TextView) listfooter.findViewById(R.id.empty);
+
+        Thread thread =  new Thread(null, loadMoreListItems);
+        thread.start();
 
         /* 아이템들 클릭했을때 */
         noticeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -88,6 +92,43 @@ public class NoticeActivity extends MainActivity {
         public void run() {
             loadingMore = true;
 
+            try {
+                String urlString = "http://192.168.0.186:8090/getNotice.do?findex="+(findex*10);
+                findex++;
+                URL url = new URL(urlString);
+                String result;
+
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                conn.setDoInput(true);
+                conn.setDoOutput(true);
+
+                int resCode = conn.getResponseCode();
+                Log.e("connect : " , "resCode ===== " + resCode);
+
+                InputStream instream = conn.getInputStream();
+
+                BufferedReader streamReader = new BufferedReader(new InputStreamReader(instream, "UTF-8"));
+                StringBuilder responseStrBuilder = new StringBuilder();
+
+                String inputStr;
+
+                while ((inputStr = streamReader.readLine()) != null) {
+                    responseStrBuilder.append(inputStr);
+                }
+
+                JSONObject json = new JSONObject(responseStrBuilder.toString());
+                jarr = new JSONArray(json.getString("items"));
+
+                if(jarr.length() == 0) {
+                    empty.setText("더이상 게시물이 없습니다.");
+                    footerView.invalidate();
+                }
+
+            } catch (Exception e) {
+                Log.e("err", e.toString());
+            }
+
             try { Thread.sleep(1000);
             } catch (InterruptedException e) {}
 
@@ -98,12 +139,25 @@ public class NoticeActivity extends MainActivity {
     private Runnable returnRes = new Runnable() {
         @Override
         public void run() {
-            for (int i = 0; i < 10; i++) {
-                noticeAdapter.addItem("공지", "제목입니다. " + count++, "2016. 05. 29");
+            for (int i = 0; i < jarr.length(); i++) {
+                try {
+
+                    JSONObject obj = (JSONObject) jarr.get(i);
+                    noticeAdapter.addItem(obj.getString("PR_PART"), obj.getString("SUBJECT"), obj.getString("REG_DATE"));
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             noticeAdapter.notifyDataSetChanged();
 
             loadingMore = false;
         }
     };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        findex = 0;
+    }
 }
