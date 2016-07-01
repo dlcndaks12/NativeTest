@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class NoticeViewAdapter extends BaseAdapter {
 
-    private ArrayList<NoticeItemView> noticeItemList = new ArrayList<NoticeItemView>() ;
+    private ArrayList<BoardViewItem> noticeItemList = new ArrayList<BoardViewItem>() ;
 
     public NoticeViewAdapter() {
 
@@ -53,7 +53,7 @@ public class NoticeViewAdapter extends BaseAdapter {
         TextView dateView = (TextView) convertView.findViewById(R.id.date) ;
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-        NoticeItemView noticeItem = noticeItemList.get(position);
+        BoardViewItem noticeItem = noticeItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
         typeView.setText(noticeItem.getType());
@@ -63,12 +63,14 @@ public class NoticeViewAdapter extends BaseAdapter {
         return convertView;
     }
 
-    public void addItem(String type, String title, String date) {
-        NoticeItemView item = new NoticeItemView();
+    public void addItem(String type, String title, String date, String contents, int prIndex) {
+        BoardViewItem item = new BoardViewItem();
 
         item.setType(type);
         item.setTitle(title);
         item.setDate(date);
+        item.setContents(contents);
+        item.setPrIndex(prIndex);
 
         noticeItemList.add(item);
     }

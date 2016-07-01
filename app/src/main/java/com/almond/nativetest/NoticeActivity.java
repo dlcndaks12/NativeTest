@@ -1,7 +1,12 @@
 package com.almond.nativetest;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +28,12 @@ import java.net.URL;
 public class NoticeActivity extends MainActivity {
     private ListView noticeList;
     private NoticeViewAdapter noticeAdapter;
-    private int count = 1;
     private boolean loadingMore = false;
     private JSONArray jarr;
     private int findex = 0;
     private View footerView;
     private TextView empty;
+    private boolean endList = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +61,22 @@ public class NoticeActivity extends MainActivity {
         noticeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                NoticeItemView item = (NoticeItemView) parent.getItemAtPosition(position);
+                BoardViewItem item = (BoardViewItem) parent.getItemAtPosition(position);
 
                 String type = item.getType();
                 String title = item.getTitle();
                 String date = item.getDate();
+                String contents = item.getContents();
+                int prIndex = item.getPrIndex();
 
-                Toast.makeText(NoticeActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                String url = "http://m.coscoi.net:8200/m/pr/noticeDetail.do?prIndex="+prIndex;
+
+                Log.e("url == : ", url);
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                Uri uri = Uri.parse(url);
+                intent.setData(uri);
+                startActivity(intent);
             }
         });
 
@@ -75,13 +89,11 @@ public class NoticeActivity extends MainActivity {
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-
-                Log.e("notice : ", "scroll ... firstVisibleItem + visible : " + (firstVisibleItem + visibleItemCount)  );
-                Log.e("notice : ", "scroll ... total: " + totalItemCount );
-
-                if(firstVisibleItem+visibleItemCount == totalItemCount && totalItemCount!=0 && !(loadingMore)) {
-                    Thread thread =  new Thread(null, loadMoreListItems);
-                    thread.start();
+                if(!endList) {
+                    if(firstVisibleItem+visibleItemCount == totalItemCount && totalItemCount!=0 && !(loadingMore)) {
+                        Thread thread =  new Thread(null, loadMoreListItems);
+                        thread.start();
+                    }
                 }
             }
         });
@@ -91,9 +103,11 @@ public class NoticeActivity extends MainActivity {
         @Override
         public void run() {
             loadingMore = true;
+            InputStream instream = null;
+            BufferedReader streamReader = null;
 
             try {
-                String urlString = "http://192.168.0.186:8090/getNotice.do?findex="+(findex*10);
+                String urlString = "http://52.78.64.186:8090/getNotice.do?findex="+(findex*10);
                 findex++;
                 URL url = new URL(urlString);
                 String result;
@@ -106,9 +120,9 @@ public class NoticeActivity extends MainActivity {
                 int resCode = conn.getResponseCode();
                 Log.e("connect : " , "resCode ===== " + resCode);
 
-                InputStream instream = conn.getInputStream();
+                instream = conn.getInputStream();
 
-                BufferedReader streamReader = new BufferedReader(new InputStreamReader(instream, "UTF-8"));
+                streamReader = new BufferedReader(new InputStreamReader(instream, "UTF-8"));
                 StringBuilder responseStrBuilder = new StringBuilder();
 
                 String inputStr;
@@ -120,19 +134,32 @@ public class NoticeActivity extends MainActivity {
                 JSONObject json = new JSONObject(responseStrBuilder.toString());
                 jarr = new JSONArray(json.getString("items"));
 
+                /* 게시글이 더이상 없을때 */
                 if(jarr.length() == 0) {
-                    empty.setText("더이상 게시물이 없습니다.");
-                    footerView.invalidate();
+                    Message msg = footerHandler.obtainMessage();
+                    footerHandler.sendMessage(msg);
+                    endList = true;
                 }
 
             } catch (Exception e) {
                 Log.e("err", e.toString());
+            } finally {
+                try {
+                    if(instream != null) instream.close();
+                    if(streamReader != null) streamReader.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
 
-            try { Thread.sleep(1000);
-            } catch (InterruptedException e) {}
-
             runOnUiThread(returnRes);
+        }
+    };
+
+    final Handler footerHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            Log.e("더이상 게시글이 없습니다", "더이상 게시글이 없습니다");
+            empty.setText("더이상 게시물이 없습니다.");
         }
     };
 
@@ -143,7 +170,7 @@ public class NoticeActivity extends MainActivity {
                 try {
 
                     JSONObject obj = (JSONObject) jarr.get(i);
-                    noticeAdapter.addItem(obj.getString("PR_PART"), obj.getString("SUBJECT"), obj.getString("REG_DATE"));
+                    noticeAdapter.addItem(obj.getString("PR_PART"), obj.getString("SUBJECT"), obj.getString("REG_DATE"), obj.getString("CONTENTS"), obj.getInt("PR_INDEX"));
 
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -42,6 +42,7 @@
             android:hardwareAccelerated="false" />
         <activity android:name="com.almond.nativetest.NoticeActivity" />
         <activity android:name="com.almond.nativetest.RecruitActivity" />
+        <activity android:name="com.almond.nativetest.DetailViewActivity" />
     </application>
 
 </manifest>

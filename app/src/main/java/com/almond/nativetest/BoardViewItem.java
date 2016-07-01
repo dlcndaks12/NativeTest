@@ -3,10 +3,12 @@ package com.almond.nativetest;
 /**
  * Created by admin on 2016-06-29.
  */
-public class NoticeItemView {
+public class BoardViewItem {
     private String type;
     private String title;
     private String date;
+    private String contents;
+    private int prIndex;
 
     public String getType() {
         return type;
@@ -30,5 +32,21 @@ public class NoticeItemView {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public void setContents(String contents) {
+        this.contents = contents;
+    }
+
+    public int getPrIndex() {
+        return prIndex;
+    }
+
+    public void setPrIndex(int prIndex) {
+        this.prIndex = prIndex;
     }
 }

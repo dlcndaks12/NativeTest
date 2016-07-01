@@ -26,6 +26,13 @@
         android:paddingBottom="1dp"
         android:background="@drawable/spinner_border"/>
 
+    <ListView
+        android:id="@+id/listPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+
     <include layout="@layout/footer"/>
 
 </LinearLayout>
