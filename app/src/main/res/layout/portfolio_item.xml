@@ -3,14 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/spinner_border">
-    
+
     <ImageView
         android:id="@+id/thumb"
-        android:src="@drawable/icon_about_coscoi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:adjustViewBounds="true" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="false" />
 
     <RelativeLayout
         android:layout_below="@+id/thumb"
@@ -54,8 +53,10 @@
             android:src="@drawable/icon_detail"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignBottom="@+id/date"/>
     </RelativeLayout>
 
 </RelativeLayout>

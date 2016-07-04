@@ -10,6 +10,8 @@ public class PortfolioViewItem {
     private String date;
     private int idx;
     private int biCateSubIdx;
+    private String detailImages;
+    private String projectName;
 
     public String getThumb() {
         return thumb;
@@ -57,5 +59,21 @@ public class PortfolioViewItem {
 
     public void setBiCateSubIdx(int biCateSubIdx) {
         this.biCateSubIdx = biCateSubIdx;
+    }
+
+    public String getDetailImages() {
+        return detailImages;
+    }
+
+    public void setDetailImages(String detailImages) {
+        this.detailImages = detailImages;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 }

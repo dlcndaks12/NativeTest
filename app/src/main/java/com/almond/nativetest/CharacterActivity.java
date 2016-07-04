@@ -10,10 +10,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
@@ -75,24 +77,25 @@ public class CharacterActivity extends MainActivity {
         LinearLayout listfooter = (LinearLayout)findViewById(R.id.listfooter);
         empty = (TextView) listfooter.findViewById(R.id.empty);
 
-        Thread thread =  new Thread(null, loadMoreListItems);
-        thread.start();
-
         /* 아이템들 클릭했을때 */
         portfolitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 PortfolioViewItem item = (PortfolioViewItem) parent.getItemAtPosition(position);
 
-                int idx = item.getIdx();
+                String title = item.getTitle();
+                String client = item.getClient();
+                String date = item.getDate();
+                String detailImages = item.getDetailImages();
 
-                String url = "http://m.coscoi.net:8200/m/pr/noticeDetail.do?prIndex="+idx;
+                Log.e("콘텐츠", "Contents : " + detailImages);
 
-                Log.e("url == : ", url);
-
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri uri = Uri.parse(url);
-                intent.setData(uri);
+                Intent intent = new Intent(CharacterActivity.this, DetailViewActivity.class);
+                intent.putExtra("heading", "BUSINESS CHARACTER &amp; MD");
+                intent.putExtra("title", title);
+                intent.putExtra("client", client);
+                intent.putExtra("date", date);
+                intent.putExtra("detailImages", detailImages);
                 startActivity(intent);
             }
         });
@@ -106,6 +109,10 @@ public class CharacterActivity extends MainActivity {
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                Log.e("notice : ", "scroll ... firstVisibleItem + visible : " + (firstVisibleItem + visibleItemCount)  );
+                Log.e("notice : ", "scroll ... total: " + totalItemCount );
+
                 if(!endList) {
                     if(firstVisibleItem+visibleItemCount == totalItemCount && totalItemCount!=0 && !(loadingMore)) {
                         Thread thread =  new Thread(null, loadMoreListItems);
@@ -124,7 +131,7 @@ public class CharacterActivity extends MainActivity {
             BufferedReader streamReader = null;
 
             try {
-                String urlString = "http://52.78.64.186:8090/getPortfolio.do?biCateSubIdx=1&findex="+(findex*10);
+                String urlString = "http://192.168.0.186:8090/getPortfolio.do?biCateSubIdx=1&findex="+(findex*5);
                 findex++;
                 URL url = new URL(urlString);
                 String result;
@@ -186,7 +193,20 @@ public class CharacterActivity extends MainActivity {
             for (int i = 0; i < jarr.length(); i++) {
                 try {
                     JSONObject obj = (JSONObject) jarr.get(i);
-                    portfolioAdapter.addItem(obj.getString("PR_PART"), obj.getString("SUBJECT"), obj.getString("REG_DATE"), obj.getInt("CONTENTS"), obj.getInt("PR_INDEX"));
+
+                    PortfolioViewItem item = new PortfolioViewItem();
+                    item.setThumb(obj.getString("MAIN_IMAGE_URL"));
+                    item.setTitle(obj.getString("SUMMARY"));
+                    item.setClient(obj.getString("CLIENT_NAME"));
+                    item.setProjectName(obj.getString("PROJECT_NAME"));
+                    item.setDetailImages(obj.getString("DETAIL_IMAGES_URL"));
+                    item.setBiCateSubIdx(obj.getInt("BI_CATE_SUB_IDX"));
+                    item.setDate(obj.getString("PROJECT_DATE"));
+                    item.setIdx(obj.getInt("IDX"));
+
+                    /*portfolioAdapter.addItem(obj.getString("MAIN_IMAGE_URL"), obj.getInt("BI_CATE_SUB_IDX"), obj.getString("CLIENT_NAME"), obj.getString("PROJECT_NAME"), obj.getString("DETAIL_IMAGES_URL"));*/
+
+                    portfolioAdapter.addItem(item);
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -194,6 +214,9 @@ public class CharacterActivity extends MainActivity {
             }
             portfolioAdapter.notifyDataSetChanged();
             loadingMore = false;
+
+            Log.e("setListheight", "setListheight ======================== ");
+            setListViewHeightBasedOnChildren(portfolitList);
         }
     };
 
@@ -201,5 +224,26 @@ public class CharacterActivity extends MainActivity {
     protected void onResume() {
         super.onResume();
         findex = 0;
+    }
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) {
+            // pre-condition
+            return;
+        }
+
+        int totalHeight = 0;
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.AT_MOST);
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
+        listView.requestLayout();
     }
 }

@@ -60,11 +60,12 @@ public class RecruitViewAdapter extends BaseAdapter {
         return convertView;
     }
 
-    public void addItem(String type, String title, String date, int prIndex) {
+    public void addItem(String type, String title, String date, String contents, int prIndex) {
         BoardViewItem item = new BoardViewItem();
 
         item.setTitle(title);
         item.setDate(date);
+        item.setContents(contents);
         item.setPrIndex(prIndex);
 
         recruitItemList.add(item);

@@ -54,9 +54,6 @@ public class NoticeActivity extends MainActivity {
         LinearLayout listfooter = (LinearLayout)findViewById(R.id.listfooter);
         empty = (TextView) listfooter.findViewById(R.id.empty);
 
-        Thread thread =  new Thread(null, loadMoreListItems);
-        thread.start();
-
         /* 아이템들 클릭했을때 */
         noticeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -67,15 +64,15 @@ public class NoticeActivity extends MainActivity {
                 String title = item.getTitle();
                 String date = item.getDate();
                 String contents = item.getContents();
-                int prIndex = item.getPrIndex();
 
-                String url = "http://m.coscoi.net:8200/m/pr/noticeDetail.do?prIndex="+prIndex;
+                Log.e("콘텐츠", "Contents : " + contents);
 
-                Log.e("url == : ", url);
-
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri uri = Uri.parse(url);
-                intent.setData(uri);
+                Intent intent = new Intent(NoticeActivity.this, DetailViewActivity.class);
+                intent.putExtra("heading", "NOTICE");
+                intent.putExtra("type", type);
+                intent.putExtra("title", title);
+                intent.putExtra("date", date);
+                intent.putExtra("contents", contents);
                 startActivity(intent);
             }
         });
