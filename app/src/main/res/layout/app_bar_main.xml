@@ -36,34 +36,21 @@
 
 
 
-        <ScrollView
+        <!--<ScrollView
             android:id="@+id/mainScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/header"
-            android:fillViewport="true">
-
-            <!--<include
-                android:id="@+id/contents"
-                layout="@layout/content_main" />-->
-
-            <!--<ViewFlipper
-                android:id="@+id/vf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:measureAllChildren="false">
-                <include android:id="@+id/content_main" layout="@layout/content_main"/>
-                <include android:id="@+id/content_whoweare" layout="@layout/content_whoweare"/>
-                <include android:id="@+id/content_history" layout="@layout/content_history"/>
-            </ViewFlipper>-->
+            android:fillViewport="true">-->
 
             <FrameLayout
                 android:id="@+id/frameLayout"
+                android:layout_below="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </FrameLayout>
 
-        </ScrollView>
+        <!--</ScrollView>-->
 
         <!--<include layout="@layout/content_main" />-->
     </RelativeLayout>

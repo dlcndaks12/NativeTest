@@ -35,7 +35,8 @@
             android:hardwareAccelerated="false" />
         <activity android:name=".NoticeActivity" />
         <activity android:name=".RecruitActivity" />
-        <activity android:name=".DetailViewActivity"></activity>
+        <activity android:name=".DetailViewActivity" />
+        <activity android:name=".PortfolioDetailActivity"></activity>
     </application>
 
 </manifest>

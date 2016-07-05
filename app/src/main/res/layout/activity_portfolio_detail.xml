@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.almond.nativetest.PortfolioDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/viewHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:gravity="center"
+            android:text="BUSINESS CHARACTER &amp; MD"
+            android:background="#535c65"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/viewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#444"
+            android:text="한국가스기술공사 브랜드 캐릭터"
+            android:background="@drawable/spinner_border"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/spinner_border">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444"
+                    android:textSize="15dp"
+                    android:text="CLIENT"/>
+                <TextView
+                    android:id="@+id/viewClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="한국가스기술공사"
+                    android:textColor="#444"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444"
+                    android:textSize="15dp"
+                    android:text="PERIOD"/>
+                <TextView
+                    android:id="@+id/viewDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#444"
+                    android:text="2008-10-01"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<ImageView
+            android:id="@+id/viewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/spinner_border"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="25dp"
+            android:paddingLeft="15dp"
+            android:background="#fff"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btnList"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:background="@drawable/btn_border"
+                android:text="목록"/>
+        </LinearLayout>
+
+        <include layout="@layout/footer"/>
+    </LinearLayout>
+</ScrollView>

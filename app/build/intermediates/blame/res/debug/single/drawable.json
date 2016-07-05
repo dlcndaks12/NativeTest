@@ -16,6 +16,10 @@
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\loading_img.png",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\loading_img.png"
+    },
+    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
@@ -50,6 +54,10 @@
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\list_item_border.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\list_item_border.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_menutitle3.png",
@@ -212,6 +220,10 @@
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\footer_border.xml"
     },
     {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_visual7.png",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\main_visual7.png"
+    },
+    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_visual1.png",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\main_visual1.png"
     },
@@ -264,12 +276,12 @@
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\drawable\\icon_nav_toggler.png"
     },
     {
-        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
-    },
-    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\printing_content1.png",

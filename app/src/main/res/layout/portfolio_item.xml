@@ -2,61 +2,63 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/spinner_border">
-
-    <ImageView
-        android:id="@+id/thumb"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="false" />
+    android:padding="15dp">
 
     <RelativeLayout
-        android:layout_below="@+id/thumb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="한국가스기술공사 브랜드 캐릭터"
-            android:textColor="#444"
-            android:textSize="16dp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/client"
-            android:layout_below="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="한국가스기술공사"
-            android:textSize="14dp"
-            android:textColor="#b3b1b1"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_below="@+id/client"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="2008.10.01"
-            android:textSize="14dp"
-            android:textColor="#b3b1b1"
-            android:textStyle="bold"/>
+        android:background="@drawable/list_item_border"
+        android:padding="1dp">
 
         <ImageView
-            android:src="@drawable/icon_detail"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/date"/>
+            android:id="@+id/thumb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="false" />
+        <RelativeLayout
+            android:layout_below="@+id/thumb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="한국가스기술공사 브랜드 캐릭터"
+                android:textColor="#444"
+                android:textSize="16dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/client"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="한국가스기술공사"
+                android:textSize="14dp"
+                android:textColor="#b3b1b1"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/date"
+                android:layout_below="@+id/client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2008.10.01"
+                android:textSize="14dp"
+                android:textColor="#b3b1b1"
+                android:textStyle="bold"/>
+            <ImageView
+                android:src="@drawable/icon_detail"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/date"/>
+        </RelativeLayout>
     </RelativeLayout>
-
 </RelativeLayout>

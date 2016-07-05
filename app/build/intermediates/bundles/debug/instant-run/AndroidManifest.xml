@@ -43,6 +43,7 @@
         <activity android:name="com.almond.nativetest.NoticeActivity" />
         <activity android:name="com.almond.nativetest.RecruitActivity" />
         <activity android:name="com.almond.nativetest.DetailViewActivity" />
+        <activity android:name="com.almond.nativetest.PortfolioDetailActivity" />
     </application>
 
 </manifest>

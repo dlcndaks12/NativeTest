@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -42,12 +43,15 @@ public class CharacterActivity extends MainActivity {
     private TextView empty;
     private PortfolioAdapter portfolioAdapter;
     private boolean endList = false;
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         frameLayout.removeAllViews();
         getLayoutInflater().inflate(R.layout.activity_character, frameLayout);
+
+        mContext = this;
 
         select = (Spinner) findViewById(R.id.spinnerSub);
         spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.character, R.layout.spinner_item);
@@ -63,11 +67,11 @@ public class CharacterActivity extends MainActivity {
         });
         select.setSelection(0);
 
-        /*  =============================================  */
         findex = 0;
 
         portfolioAdapter = new PortfolioAdapter();
         portfolitList = (ListView) findViewById(R.id.listPortfolio);
+        portfolitList.setDivider(null);
         portfolitList.setAdapter(portfolioAdapter);
 
         footerView = ((LayoutInflater)this.getSystemService
@@ -90,7 +94,7 @@ public class CharacterActivity extends MainActivity {
 
                 Log.e("콘텐츠", "Contents : " + detailImages);
 
-                Intent intent = new Intent(CharacterActivity.this, DetailViewActivity.class);
+                Intent intent = new Intent(CharacterActivity.this, PortfolioDetailActivity.class);
                 intent.putExtra("heading", "BUSINESS CHARACTER &amp; MD");
                 intent.putExtra("title", title);
                 intent.putExtra("client", client);
@@ -104,16 +108,15 @@ public class CharacterActivity extends MainActivity {
         portfolitList.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-
             }
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 
-                Log.e("notice : ", "scroll ... firstVisibleItem + visible : " + (firstVisibleItem + visibleItemCount)  );
-                Log.e("notice : ", "scroll ... total: " + totalItemCount );
-
                 if(!endList) {
+                    Log.e("notice : ", "scroll ... firstVisibleItem + visible : " + (firstVisibleItem + visibleItemCount)  );
+                    Log.e("notice : ", "scroll ... total: " + totalItemCount );
+
                     if(firstVisibleItem+visibleItemCount == totalItemCount && totalItemCount!=0 && !(loadingMore)) {
                         Thread thread =  new Thread(null, loadMoreListItems);
                         thread.start();
@@ -131,7 +134,7 @@ public class CharacterActivity extends MainActivity {
             BufferedReader streamReader = null;
 
             try {
-                String urlString = "http://192.168.0.186:8090/getPortfolio.do?biCateSubIdx=1&findex="+(findex*5);
+                String urlString = "http://52.78.64.186:8090/getPortfolio.do?biCateSubIdx=1&findex="+(findex*5);
                 findex++;
                 URL url = new URL(urlString);
                 String result;
@@ -214,9 +217,6 @@ public class CharacterActivity extends MainActivity {
             }
             portfolioAdapter.notifyDataSetChanged();
             loadingMore = false;
-
-            Log.e("setListheight", "setListheight ======================== ");
-            setListViewHeightBasedOnChildren(portfolitList);
         }
     };
 
@@ -224,26 +224,5 @@ public class CharacterActivity extends MainActivity {
     protected void onResume() {
         super.onResume();
         findex = 0;
-    }
-
-    public static void setListViewHeightBasedOnChildren(ListView listView) {
-        ListAdapter listAdapter = listView.getAdapter();
-        if (listAdapter == null) {
-            // pre-condition
-            return;
-        }
-
-        int totalHeight = 0;
-        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.AT_MOST);
-        for (int i = 0; i < listAdapter.getCount(); i++) {
-            View listItem = listAdapter.getView(i, null, listView);
-            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
-            totalHeight += listItem.getMeasuredHeight();
-        }
-
-        ViewGroup.LayoutParams params = listView.getLayoutParams();
-        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-        listView.setLayoutParams(params);
-        listView.requestLayout();
     }
 }

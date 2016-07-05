@@ -1,123 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.almond.nativetest.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="com.almond.nativetest.MainActivity">
 
-    <com.almond.nativetest.HeightViewPager
-        android:id="@+id/view_pager"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"></com.almond.nativetest.HeightViewPager>
+        android:layout_height="wrap_content">
+        <com.almond.nativetest.HeightViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></com.almond.nativetest.HeightViewPager>
 
-    <LinearLayout
-        android:id="@+id/quickMenu"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/view_pager"
-        android:background="@drawable/main_menu_border"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingBottom="3dp"
-        android:paddingTop="3dp">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/main_menu1_icon" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/main_menu2_border"
-            android:paddingLeft="1dp"
-            android:paddingRight="1dp">
+        <LinearLayout
+            android:id="@+id/quickMenu"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/view_pager"
+            android:background="@drawable/main_menu_border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="?attr/selectableItemBackground"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/main_menu2_icon" />
-        </FrameLayout>
+                android:src="@drawable/main_menu1_icon" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/main_menu3_icon" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/downArea"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/quickMenu"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="77dp"
-            android:background="@drawable/down_border1">
-
-            <ImageView
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="15dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="15dp"
-                android:layout_marginRight="15dp"
-                android:scaleType="fitEnd"
-                android:src="@drawable/main_btn1_2" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_menu2_border"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/main_menu2_icon" />
+            </FrameLayout>
 
             <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/selectableItemBackground"
-                android:padding="20dp"
-                android:scaleType="fitStart"
-                android:src="@drawable/main_btn1_1" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="77dp"
-            android:background="@drawable/down_border1">
-
-            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="15dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="15dp"
-                android:layout_marginRight="15dp"
-                android:scaleType="fitEnd"
-                android:src="@drawable/main_btn2_2" />
-
-            <ImageButton
-                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="?attr/selectableItemBackground"
-                android:padding="20dp"
-                android:scaleType="fitStart"
-                android:src="@drawable/main_btn2_1" />
-        </RelativeLayout>
-    </LinearLayout>
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_menu3_icon" />
+        </LinearLayout>
 
-    <include layout="@layout/footer"/>
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/downArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quickMenu"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:background="@drawable/down_border1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/main_btn1_2" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="20dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/main_btn1_1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:background="@drawable/down_border1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/main_btn2_2" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="20dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/main_btn2_1" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/footer"/>
+    </RelativeLayout>
+</ScrollView>

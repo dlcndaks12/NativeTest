@@ -35,7 +35,7 @@ public class DetailViewActivity extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         frameLayout.removeAllViews();
-        getLayoutInflater().inflate(R.layout.activity_detail_view, frameLayout);
+        getLayoutInflater().inflate(R.layout.activity_portfolio_detail, frameLayout);
 
         Intent intent = getIntent();
         heading = intent.getExtras().getString("heading");

@@ -55,15 +55,8 @@ public class PortfolioAdapter extends BaseAdapter {
     }
 
     private class DownloadAsyncTask extends AsyncTask<ViewHolder, Void, ViewHolder> {
-        private AsyncCallback setImageViewCallback;
 
-        public DownloadAsyncTask() {
-
-        }
-
-        public DownloadAsyncTask(AsyncCallback setImageViewCallback) {
-            this.setImageViewCallback = setImageViewCallback;
-        }
+        public DownloadAsyncTask() { }
 
         @Override
         protected ViewHolder doInBackground(ViewHolder... params) {
@@ -112,7 +105,6 @@ public class PortfolioAdapter extends BaseAdapter {
             if (result.bitmap == null) {
             } else {
                 result.imageView.setImageBitmap(result.bitmap);
-                setImageViewCallback.callback();
             }
         }
     }
@@ -135,28 +127,30 @@ public class PortfolioAdapter extends BaseAdapter {
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
         ImageView thumbView = (ImageView) convertView.findViewById(R.id.thumb);
-        TextView titleView = (TextView) convertView.findViewById(R.id.title) ;
-        TextView clientView = (TextView) convertView.findViewById(R.id.client) ;
-        TextView dateView = (TextView) convertView.findViewById(R.id.date) ;
+        TextView titleView = (TextView) convertView.findViewById(R.id.title);
+        TextView clientView = (TextView) convertView.findViewById(R.id.client);
+        TextView dateView = (TextView) convertView.findViewById(R.id.date);
+
+        Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.loading_img);
+        thumbView.setImageBitmap(icon);
 
         PortfolioViewItem portfolioViewItem = portfolioItemList.get(position);
 
         String source = "http://coscoi.net/" + portfolioViewItem.getThumb();
-        Log.e("source : ", source);
 
         viewHolder.imageURL = source;
-        new DownloadAsyncTask(new AsyncCallback() {
-            @Override
-            public void callback() {
-                Log.e("img callback !!!!!!!!!!!!!", "cal !!!!!!!!!!!!!!!!!!!!!!!!!");
-            }
-        }).execute(viewHolder);
-
+        new DownloadAsyncTask().execute(viewHolder);
 
         // 아이템 내 각 위젯에 데이터 반영
         titleView.setText(portfolioViewItem.getTitle());
         clientView.setText(portfolioViewItem.getClient());
         dateView.setText(portfolioViewItem.getDate());
+
+        ImageView thumb = (ImageView) convertView.findViewById(R.id.thumb);
+
+        int height = (int)(context.getResources().getDisplayMetrics().widthPixels * 0.5145f);
+
+        thumb.getLayoutParams().height = height;
 
         return convertView;
     }
