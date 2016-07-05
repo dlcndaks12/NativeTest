@@ -61,7 +61,7 @@ public class PortfolioDetailActivity extends MainActivity {
         viewDate = (TextView) findViewById(R.id.viewDate);
         viewDate.setText(date);
 
-        viewDetail = (ImageView) findViewById(R.id.viewDetail);
+        //viewDetail = (ImageView) findViewById(R.id.viewDetail);
 
 
         String[] obj = detailImages.split("\\_\\_\\]SEPARATOR\\[\\_\\_");
