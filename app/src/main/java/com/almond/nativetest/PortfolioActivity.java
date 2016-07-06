@@ -2,21 +2,16 @@ package com.almond.nativetest;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
@@ -31,7 +26,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class CharacterActivity extends MainActivity {
+public class PortfolioActivity extends MainActivity {
 
     private Spinner select;
     private SpinnerAdapter spinnerAdapter;
@@ -44,6 +39,7 @@ public class CharacterActivity extends MainActivity {
     private PortfolioAdapter portfolioAdapter;
     private boolean endList = false;
     private Context mContext;
+    private int biCateSubIdx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,19 +49,82 @@ public class CharacterActivity extends MainActivity {
 
         mContext = this;
 
+        Intent intent = getIntent();
+        if (intent.getExtras() != null) {
+            biCateSubIdx = intent.getExtras().getInt("biCateSubIdx");
+        } else {
+            biCateSubIdx = 1;
+        }
+
         select = (Spinner) findViewById(R.id.spinnerSub);
-        spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.character, R.layout.spinner_item);
-        select.setAdapter(spinnerAdapter);
-        select.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                itemSelected(view, position, "business");
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
-        select.setSelection(0);
+
+        if (biCateSubIdx < 4) {
+            spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.character, R.layout.spinner_item);
+            select.setAdapter(spinnerAdapter);
+            select.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Log.e("==================================", "============================ call E = : " + position);
+
+                    switch (position) {
+                        case 0:
+                            biCateSubIdx = 1;
+                            break;
+                        case 1:
+                            biCateSubIdx = 2;
+                            break;
+                        case 2:
+                            biCateSubIdx = 3;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    findex = 0;
+                    portfolioAdapter.clearAdapter();
+
+                    Thread thread =  new Thread(null, loadMoreListItems);
+                    thread.start();
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+        } else {
+            spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.web, R.layout.spinner_item);
+            select.setAdapter(spinnerAdapter);
+            select.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Log.e("==================================", "============================ call E = : " + position);
+
+                    switch (position) {
+                        case 0:
+                            biCateSubIdx = 4;
+                            break;
+                        case 1:
+                            biCateSubIdx = 5;
+                            break;
+                        case 2:
+                            biCateSubIdx = 6;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    findex = 0;
+                    portfolioAdapter.clearAdapter();
+
+                    Thread thread =  new Thread(null, loadMoreListItems);
+                    thread.start();
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+        }
+
+        //select.setSelection(biCateSubIdx-1);
 
         findex = 0;
 
@@ -94,8 +153,8 @@ public class CharacterActivity extends MainActivity {
 
                 Log.e("콘텐츠", "Contents : " + detailImages);
 
-                Intent intent = new Intent(CharacterActivity.this, PortfolioDetailActivity.class);
-                intent.putExtra("heading", "BUSINESS CHARACTER &amp; MD");
+                Intent intent = new Intent(PortfolioActivity.this, PortfolioDetailActivity.class);
+                intent.putExtra("heading", "BUSINESS CHARACTER & MD");
                 intent.putExtra("title", title);
                 intent.putExtra("client", client);
                 intent.putExtra("date", date);
@@ -134,7 +193,8 @@ public class CharacterActivity extends MainActivity {
             BufferedReader streamReader = null;
 
             try {
-                String urlString = "http://52.78.64.186:8090/getPortfolio.do?biCateSubIdx=1&findex="+(findex*5);
+                String urlString = "http://52.78.64.186:8090/getPortfolio.do?biCateSubIdx="+biCateSubIdx+"&findex="+(findex*5);
+                Log.e("url : ", urlString);
                 findex++;
                 URL url = new URL(urlString);
                 String result;

@@ -14,17 +14,11 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".WhoweareActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".LocationActivity" />
-        <activity android:name=".CharacterActivity" />
+        <activity android:name=".PortfolioActivity" />
         <activity android:name=".WebActivity" />
         <activity
             android:name=".PrintingActivity"
@@ -36,7 +30,18 @@
         <activity android:name=".NoticeActivity" />
         <activity android:name=".RecruitActivity" />
         <activity android:name=".DetailViewActivity" />
-        <activity android:name=".PortfolioDetailActivity"></activity>
+        <activity android:name=".PortfolioDetailActivity" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingActivity"></activity>
     </application>
 
 </manifest>

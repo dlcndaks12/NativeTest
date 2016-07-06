@@ -78,12 +78,21 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!--<ImageView
+        <LinearLayout
             android:id="@+id/viewDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:padding="15dp"
-            android:background="@drawable/spinner_border"/>-->
+            android:background="@drawable/spinner_border">
+
+            <!--<ImageView
+                android:id="@+id/viewDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@drawable/spinner_border"/>-->
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -7,6 +7,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LevelListDrawable;
 import android.os.AsyncTask;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
@@ -42,7 +43,7 @@ public class URLImageParser implements Html.ImageGetter {
     @Override
     public Drawable getDrawable(String source) {
         LevelListDrawable d = new LevelListDrawable();
-        Drawable empty = c.getResources().getDrawable(R.drawable.ic_menu_camera);
+        Drawable empty = ResourcesCompat.getDrawable(c.getResources(), R.drawable.ic_menu_camera, null);
         d.addLevel(0, 0, empty);
         d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
 
@@ -100,7 +101,7 @@ public class URLImageParser implements Html.ImageGetter {
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             if (bitmap != null) {
-                BitmapDrawable d = new BitmapDrawable(bitmap);
+                Drawable d = new BitmapDrawable(c.getResources(), bitmap);
 
                 int width = bitmap.getWidth();
                 int height = bitmap.getHeight();
@@ -110,7 +111,7 @@ public class URLImageParser implements Html.ImageGetter {
                 //가로제어(가로기준으로 세로를 맞춤)
                 TextView tv = (TextView) container;
                 imgWidth = c.getResources().getDisplayMetrics().widthPixels - (tv.getPaddingLeft() + tv.getPaddingRight()); //이미지의 가로를 플랫폼으로 맞추고
-                imgHeight = height * (width/imgWidth); //가로에따른 비율계산
+                imgHeight = (int)(height * (imgWidth/(double)width)); //가로에따른 비율계산
 
                 mDrawable.addLevel(1, 1, d);
                 mDrawable.setBounds(0, 0, imgWidth, imgHeight);

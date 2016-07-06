@@ -20,17 +20,11 @@
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
             android:name="com.almond.nativetest.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.almond.nativetest.WhoweareActivity" />
         <activity android:name="com.almond.nativetest.HistoryActivity" />
         <activity android:name="com.almond.nativetest.LocationActivity" />
-        <activity android:name="com.almond.nativetest.CharacterActivity" />
+        <activity android:name="com.almond.nativetest.PortfolioActivity" />
         <activity android:name="com.almond.nativetest.WebActivity" />
         <activity
             android:name="com.almond.nativetest.PrintingActivity"
@@ -43,6 +37,17 @@
         <activity android:name="com.almond.nativetest.RecruitActivity" />
         <activity android:name="com.almond.nativetest.DetailViewActivity" />
         <activity android:name="com.almond.nativetest.PortfolioDetailActivity" />
+        <activity
+            android:name="com.almond.nativetest.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.almond.nativetest.SettingActivity" />
     </application>
 
 </manifest>

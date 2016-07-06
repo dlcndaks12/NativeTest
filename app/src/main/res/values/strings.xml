@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">NativeTest</string>
+
+
+    <string name="Version">1.0.0.1</string>
+
+
+
+
     <string name="navtitle1">ABOUT COSCOI</string>
     <string name="navmenu1_1">· WHO WE ARE</string>
     <string name="navmenu1_2">· HISTORY</string>

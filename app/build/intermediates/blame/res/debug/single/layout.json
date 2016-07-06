@@ -24,12 +24,12 @@
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
-    },
-    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notice_item.xml",
@@ -48,12 +48,12 @@
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_printing.xml",
-        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_printing.xml"
-    },
-    {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_character.xml",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_character.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_printing.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_printing.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recruit.xml",
@@ -184,12 +184,16 @@
         "source": "D:\\android\\NativeTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_history.xml",
-        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_history.xml"
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_setting.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_location.xml",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_location.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_history.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_history.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
@@ -222,6 +226,10 @@
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\recruit_item.xml",
         "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\recruit_item.xml"
+    },
+    {
+        "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
+        "source": "D:\\android\\NativeTest\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
         "merged": "D:\\android\\NativeTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",

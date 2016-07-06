@@ -116,14 +116,16 @@ public class PortfolioAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
 
         if (convertView == null) {
+            Log.e("portfolio adapter", "컨버터뷰 널입니다.");
+
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.portfolio_item, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.imageView = (ImageView) convertView.findViewById(R.id.thumb);
             convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
         }
-
-        viewHolder = (ViewHolder) convertView.getTag();
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
         ImageView thumbView = (ImageView) convertView.findViewById(R.id.thumb);
@@ -170,5 +172,11 @@ public class PortfolioAdapter extends BaseAdapter {
 
     public void addItem(PortfolioViewItem item) {
         portfolioItemList.add(item);
+    }
+
+    public void clearAdapter()
+    {
+        portfolioItemList.clear();
+        notifyDataSetChanged();
     }
 }

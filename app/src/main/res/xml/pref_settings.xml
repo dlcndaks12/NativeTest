@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:id="@+id/pre1"
+        android:key="vers"
+        android:title="앱버전" >
+        <Preference
+            android:key="version"
+            android:title="@string/Version"/>
+        <Preference
+            android:key="versioncheck"
+            android:title="최신버전 확인" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pushsetting"
+        android:title="설정" >
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="Setting_Push"
+            android:title="푸시 알림 설정"
+            android:summaryOn="푸시 알림을 받습니다."
+            android:summaryOff="푸시 알림을 받지 않습니다."
+            android:switchTextOff="OFF"
+            android:switchTextOn="ON" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="Setting_Vibrate"
+            android:dependency="Setting_Push"
+            android:title="푸시 진동 설정"
+            android:summaryOn="푸시 알림을 받으면 진동이 울립니다."
+            android:summaryOff="푸시 알림을 받으면 진동이 울리지 않습니다."/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="Setting_Sound"
+            android:dependency="Setting_Push"
+            android:title="푸시 사운드 설정"
+            android:summaryOn="푸시 알림을 받으면 사운드가 울립니다."
+            android:summaryOff="푸시 알림을 받으면 사운드가 울리지 않습니다."/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="Setting_Version"
+            android:title="새 버전 알림"
+            android:summaryOn="어플 실행시 항상 새 버전을 채크합니다."
+            android:summaryOff="어플 실행시 항상 새 버전을 채크하지 않습니다."
+            android:switchTextOff="OFF"
+            android:switchTextOn="ON" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="helps"
+        android:title="고객센터" >
+        <Preference
+            android:key="help"
+            android:title="도움말" />
+    </PreferenceCategory>
+</PreferenceScreen>
